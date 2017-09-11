@@ -1,5 +1,5 @@
 RewriteEngine on
-RewriteBase /tutkit_php/Gallery
+RewriteBase /Tutkit_OOP_mit_PHP/Gallery
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILE} !-f
 RewriteCond %{REQUEST_FILE} !-d
