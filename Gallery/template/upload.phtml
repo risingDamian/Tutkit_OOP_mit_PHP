@@ -19,25 +19,22 @@
                     <strong class="logo"><a href="#">Tribelens</a></strong>
                     <div class="register-holder">
                         <div class="register-frame">
-                            <form method="POST" class="register-form">
+                            <form action="<?php echo App::getBaseUrl()?>upload/save" enctype="multipart/form-data" method="POST" class="register-form">
                                 <fieldset>
                                     <div class="box">
                                         <?php if (\Session\Msg::hasMsg()): ?>
-                                        <div class="row">
-                                            <span><?php echo \Session\Msg::readMsg(); ?></span>
-                                        </div>
+                                            <div class="row">
+                                                <span><?php echo \Session\Msg::readMsg(); ?></span>
+                                            </div>
                                         <?php endif; ?>
+
                                         <div class="row">
-                                            <div class="text-holder">
-                                                <input name="email" type="text" value="Email" />
+                                            <div>
+                                                <input name="uploadImg" type="file"/>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="text-holder pass">
-                                                <input name="password" type="password" value="Password" />
-                                            </div>
-                                        </div>
-                                        <input type="submit" value="Login" />
+
+                                        <input type="submit" value="Upload" />
                                     </div>
                                 </fieldset>
                             </form>

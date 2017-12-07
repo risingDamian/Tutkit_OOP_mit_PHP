@@ -11,6 +11,6 @@ class Base {
 
     protected function connect() {
         $dataSource = "mysql:host=localhost;dbname=bilder";
-        return new \PDO($dataSource, "bilder", "bilder");
+        return new \PDO($dataSource, "root", "root");
     }
 }

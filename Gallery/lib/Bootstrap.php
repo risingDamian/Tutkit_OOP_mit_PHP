@@ -59,10 +59,10 @@ class Bootstrap
         $this->_controller = $ctrl;
     }
 
-
     private function setAction($action) {
         // welche Methode in Klasse xyz?
-        
+
+
         // /upload/save/
         // \Controller\Upload::saveAction()
 

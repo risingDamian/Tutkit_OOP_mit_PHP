@@ -1,0 +1,40 @@
+* +html .w1{
+	min-height:100%;
+	height:auto;
+}
+* +html #wrapper .w2{margin-bottom:expression((document.getElementById("footer")) ? (document.getElementById("footer").offsetHeight + "px"):('0px'));}
+* +html #footer{
+	position:relative;
+	margin-top:expression(-this.offsetHeight + "px");
+}
+.png-box{margin-bottom:30px;}
+.png-box .content{float:left;}
+.png-box .c{padding:30px;}
+.png-box .l,
+.png-box .r,
+.png-box .lt,
+.png-box .rt,
+.png-box .t,
+.png-box .lb,
+.png-box .rb,
+.png-box .b{
+	position:absolute;
+	top:0;
+	left:0;
+}
+.png-box .l,
+.png-box .r{
+	height:expression(this.parentNode.parentNode.offsetHeight - 30 + "px");
+	top:30px;
+}
+.png-box .lb,
+.png-box .rb,
+.png-box .b{top:expression(this.parentNode.parentNode.offsetHeight + "px");}
+.png-box .t,
+.png-box .b{
+	left:30px;
+	width:expression(this.parentNode.parentNode.offsetWidth - 60 + "px");
+}
+.png-box .r,
+.png-box .rt,
+.png-box .rb{left:expression(this.parentNode.parentNode.offsetWidth - 30 + "px");}
