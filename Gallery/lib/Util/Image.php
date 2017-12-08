@@ -23,8 +23,8 @@ class Image {
 
         }
 
-        if ($imgExt != "jpg" && $imgExt != "jpeg") {
-            throw new \RuntimeException('Nur JPG erlaubt');
+        if ($imgExt != "jpg" && $imgExt != "jpeg" && $imgExt != "png") {
+            throw new \RuntimeException('Nur JPG & PNG erlaubt');
         }
 
         if ($uploadedFile['size'] > 50000000) {

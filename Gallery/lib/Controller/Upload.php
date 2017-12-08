@@ -13,6 +13,7 @@ use Util\Image;
 
 class Upload extends Base {
 
+    //aufrufen des upload Seitentemplates
     public function indexAction($params) {
 
         $this->_checkLogin();
@@ -20,6 +21,7 @@ class Upload extends Base {
         echo $this->render('upload.phtml', array());
     }
 
+    //speichern des Bildes
     public function saveAction($params) {
 
         $this->_checkLogin();
@@ -41,6 +43,8 @@ class Upload extends Base {
         header('Location: ' . $url);
     }
 
+
+    //überprüfen ob nutzer NICHT eingeloggt -> verweis auf startseite
     protected function _checkLogin() {
         if (!User::isLoggedIn()) {
             $url = \App::getBaseUrl() . 'index/login';

@@ -6,6 +6,7 @@
  * Time: 13:40
  */
 
+//autoloader bindet ggf. nicht vorhandene classen über require automatisiert mit ein
 function autoloader($class) {
     $newName = str_replace('\\', '/', $class);
     $path = "lib/$newName.php";

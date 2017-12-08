@@ -69,7 +69,7 @@ class Bootstrap
         // Formatierung der Eingabe, sodass Methode der Klasse gefunden werden kann
         $actionMethod = sprintf("%sAction", strtolower($action));
 
-        // Überprüfen ob Klasse jeweilige Methode nicht besitzt und ggf dann Fehlermeldung ausgeben
+        // Überprüfen ob Klasse jeweilige Action Methode nicht besitzt und ggf dann Fehlermeldung ausgeben
         $reflection = new ReflectionClass($this->_controller);
         if (!$reflection->hasMethod($actionMethod)) {
             throw new InvalidArgumentException(
@@ -107,7 +107,7 @@ class Bootstrap
     }
 
     public function run () {
-        // Neues Objekt der Controller Klasse erstellen
+        // Neues Instnanz / Objekt der Controller Klasse erstellen
         $ctrlObj = new $this->_controller;
 
         // Aktion Methode aufrufen und ihr die Parameter mit übergeben
